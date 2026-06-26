@@ -39,3 +39,35 @@ document.addEventListener("DOMContentLoaded", () => {
 function PlayAudio() {
   document.getElementById("musica1").play();
 }
+
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    // Obtener el código de la URL
+    const codigo = new URLSearchParams(window.location.search).get("id");
+
+    if (!codigo) {
+      document.getElementById("nombre").textContent = "Código no encontrado";
+      return;
+    }
+
+    // Leer el archivo JSON
+    const response = await fetch("./recursos/links.json");
+    const boletos = await response.json();
+
+    // Buscar invitado
+    const invitado = boletos[codigo];
+
+    if (!invitado) {
+      document.getElementById("nombre").textContent = "Invitación inválida";
+      return;
+    }
+
+    // Mostrar datos
+    document.getElementById("nombre").textContent = invitado.nombre;
+    document.getElementById("pasesAdulto").textContent = invitado.pasesAdulto;
+    document.getElementById("pasesNino").textContent = invitado.pasesNino;
+  } catch (error) {
+    console.error(error);
+    document.getElementById("nombre").textContent = "Error al cargar datos";
+  }
+});
