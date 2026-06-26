@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     // Leer el archivo JSON
-    const response = await fetch("./recursos/links.json");
+    const response = await fetch("./files/links.json");
     const boletos = await response.json();
 
     // Buscar invitado
