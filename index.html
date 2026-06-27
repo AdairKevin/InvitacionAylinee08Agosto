@@ -38,6 +38,42 @@
         <div class="textoNovios">Aylinee</div>
       </div>
 
+      <div class="ticket-boda">
+        <div class="ticket-header">
+          <p>MIS XV AÑOS</p>
+        </div>
+
+        <div class="ticket-body">
+          <h1 id="nombre"></h1>
+
+          <div class="ticket-info">
+            <div class="info-row">
+              <div class="info-col border-right">
+                <span class="label">PASES ADULTO:</span>
+                <span class="value" id="pasesAdulto"></span>
+              </div>
+              <div class="info-col">
+                <span class="label">PASES NIÑO:</span>
+                <span class="value" id="pasesNino"></span>
+              </div>
+            </div>
+            <div class="info-row border-top">
+              <div class="info-col" style="flex: 3">
+                <span class="label">DESTINO:</span>
+                <span class="value">Los XV de Aylinee</span>
+              </div>
+              <div class="info-col stamp-icon">
+                <span>★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket-footer">
+          <p>BIENVENIDO</p>
+        </div>
+      </div>
+
       <div class="espectro">
         <h1>Mi Canción</h1>
         <img src="recursos/espectro.webp" alt="" />
@@ -60,51 +96,12 @@
         </button>
       </div>
 
-  <div class="ticket-boda">
-  
-  <div class="ticket-header">
-    <p>MIS XV AÑOS</p>
-  </div>
-
-  <div class="ticket-body">
-    
-    
-    <h1 id="nombre"></h1>
-
-    <div class="ticket-info">
-      <div class="info-row">
-        <div class="info-col border-right">
-          <span class="label">PASES ADULTO:</span>
-          <span class="value" id="pasesAdulto"></span>
-        </div>
-        <div class="info-col">
-          <span class="label">PASES NIÑO:</span>
-          <span class="value" id="pasesNino"></span>
-        </div>
-      </div>
-      <div class="info-row border-top">
-        <div class="info-col" style="flex: 3;">
-          <span class="label">DESTINO:</span>
-          <span class="value">Los XV de Aylinee</span>
-        </div>
-        <div class="info-col stamp-icon">
-          <span>★</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="ticket-footer">
-    <p>BIENVENIDO</p>
-  </div>
-</div>
-
       <div class="contador">
         <p class="frase">
           Con la bendición de Dios y el amor de mi familia hoy celebro Mis XV
           Años.
         </p>
-        <div class="fecha">08 | 08 | 26</div>
+        <div class="fecha">08 / 08 / 26</div>
         <div class="conteo">Solo Faltan:</div>
 
         <section>
@@ -126,13 +123,16 @@
       </div>
 
       <div class="bienvenida">
-        <div class="card" style="width: 80%; height: 50%; align-items: center">
-          <div class="card-body">
-            <h5 class="card-title">Mis XV Años</h5>
-            <p class="card-text" id="agradecimiento">
-              "Hoy celebro mis quince años, un momento único donde la niñez se
-              transforma en juventud. Con la bendición de Dios y el amor de mi
-              familia, inicio esta nueva etapa de mi vida."
+        <div
+          class="card-bienvenida"
+          style="width: 80%; height: 50%; align-items: center"
+        >
+          <div class="card-body-bienvenida">
+            <h5 class="card-title-bienvenida">Mis XV Años</h5>
+            <p class="card-text-bienvenida" id="agradecimiento">
+              "Con la bendición de Dios y el amor de mi familia, celebro con
+              alegría mis quince años. Gracias por formar parte de este momento
+              que llevaré siempre en mi corazón."
             </p>
             <img src="recursos/" alt="" />
           </div>
@@ -151,6 +151,10 @@
             </p>
           </div>
         </div>
+      </div>
+
+      <div class="imagen-separador">
+        <img src="./recursos/Portada.jpeg" />
       </div>
 
       <div class="cronograma">
@@ -304,7 +308,7 @@
               C. Riva Palacio 244, Chalco Centro, 56600 Chalco de Díaz
               Covarrubias, Méx.
             </p>
-            <img src="recursos/" alt="" width="100%" />
+            <img src="recursos/santiago chalco.jpg" alt="" width="100%" />
           </div>
 
           <button type="button" class="btn btn-light" id="ubicacion">
@@ -333,7 +337,7 @@
               Avenida Soto y Gama y poniente 12-B, Col del Carmen, 56619 Valle
               de Chalco Solidaridad, Méx.
             </p>
-            <img src="recursos/salon.jpeg" alt="" width="100%" />
+            <img src="recursos/salon1.jpeg" alt="" width="100%" />
           </div>
 
           <button type="button" class="btn btn-light" id="ubicacion">
@@ -430,7 +434,7 @@
       </div>
 
       <div class="musica">
-        <audio id="musica1" controls autoplay loop>
+        <audio id="musica1" controls loop>
           <source
             src="/recursos/Lana Del Rey - Say Yes To Heaven (Official Audio) [MiAoetOXKcY].mp3"
           />
