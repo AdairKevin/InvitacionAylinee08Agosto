@@ -935,3 +935,130 @@ h6 {
 .fotos {
   margin-bottom: -40px;
 }
+
+/* Variables para el boleto */
+:root {
+  --ticket-navy: #192a56; /* Azul marino de la imagen */
+  --ticket-white: #ffffff;
+  /* IMPORTANTE: Este color debe ser EXACTAMENTE el mismo que el fondo 
+     de tu página para que los recortes funcionen visualmente */
+  --bg-page: #192a56; 
+}
+
+/* Contenedor Principal */
+.ticket-boda {
+  background: linear-gradient(180deg, #ffffff, #f8f9fc);
+  max-width: 300px;
+  margin: 40px auto;
+  border: 4px solid var(--ticket-navy);
+  border-radius: 22px;
+  position: relative;
+  color: var(--ticket-navy);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, .25),
+    inset 0 0 0 2px rgba(255,255,255,.8);
+  overflow: hidden;
+}
+
+/* Recortes laterales (Efecto de perforación de boleto) */
+.cutout {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-page); /* Finge ser un agujero */
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Posiciones de los recortes */
+.cutout.left { left: -25px; }
+.cutout.right { right: -25px; }
+
+/* Recortes a la altura de las líneas punteadas */
+.cutout.top-cut { top: 45px; }
+.cutout.bottom-cut { bottom: 45px; }
+
+/* Encabezado y Pie (Textos "BOLETO DE XV AÑOS") */
+.ticket-header, .ticket-footer {
+  text-align: center;
+  padding: 15px;
+  font-family: 'Courier New', Courier, monospace; /* Tipografía tipo recibo */
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Líneas punteadas */
+.ticket-header { border-bottom: 3px dashed var(--ticket-navy); }
+.ticket-footer { border-top: 3px dashed var(--ticket-navy); }
+
+/* Cuerpo Central */
+.ticket-body {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.flight-icon {
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+/* Nombre del Invitado */
+.ticket-boda h1#nombre {
+  font-family: 'Georgia', 'Times New Roman', serif; /* Tipografía elegante */
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 10px 0 35px 0;
+  color: var(--ticket-navy);
+}
+
+/* Cuadro de Información (La "Tabla" central) */
+.ticket-info{
+    border:2px solid #203d84;
+    border-radius:12px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.info-row { display: flex; }
+
+.info-col {
+  padding: 10px 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Bordes internos de la tabla */
+.border-right { border-right: 2px solid var(--ticket-navy); }
+.border-top { border-top: 2px solid var(--ticket-navy); }
+
+/* Textos de la tabla */
+.label {
+  font-family: 'Arial', sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.value {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Icono de sello en la esquina inferior derecha de la tabla */
+.stamp-icon {
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--ticket-navy);
+  flex: 1;
+}
